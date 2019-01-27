@@ -1,0 +1,51 @@
+testinfo:
+      - id: test_setup001
+        title: 首页---设置
+        info: 打开设置页面
+testcase:
+      - element_info: userProNick
+        find_type: id
+        operate_type: perform
+        info: 鼠标悬停账户菜单
+      - element_info: //a[text()='设置']
+        find_type: xpath
+        operate_type: click
+        info: 选择设置
+      - element_info: nick
+        find_type: id
+        operate_type: clear
+        info: 清空昵称文本框内容
+      - element_info: nick
+        find_type: id
+        operate_type: send_keys
+        info: 昵称文本框录入数据
+      - element_info: usersign
+        find_type: id
+        operate_type: clear
+        info: 清空签名档文本框内容
+      - element_info: usersign
+        find_type: id
+        operate_type: send_keys
+        info: 签名档录入数据
+      - element_info: person_info_save_btn
+        find_type: id
+        operate_type: click
+        info: 单击保存
+      - element_info: userProNick
+        find_type: id
+        operate_type: perform
+        info: 鼠标悬停账户菜单
+      - element_info: //a[text()='我的新热榜']
+        find_type: xpath
+        operate_type: click
+        info: 选择我的新热榜
+check:
+      - element_info: //div[text()='请输入用户昵称']
+        find_type: xpath
+        info: 检查昵称文本框为空是否有提示
+      - element_info: //a[text()='yingoja']
+        find_type: xpath
+        info: 检查修改后的昵称是否匹配
+      - element_info: //div[@class='tu-b']
+        find_type: xpath
+        info: 检查修改后的签名是否匹配

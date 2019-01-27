@@ -1,0 +1,43 @@
+testinfo:
+      - id: test_login001
+        title: 登录测试
+        info: 打开抽屉首页
+testcase:
+      - element_info: login-link-a
+        find_type: ID
+        operate_type: click
+        info: 打开登录对话框
+      - element_info: mobile
+        find_type: ID
+        operate_type: send_keys
+        info: 输入手机号
+      - element_info: mbpwd
+        find_type: ID
+        operate_type: send_keys
+        info: 输入密码
+      - element_info: //input[@class='keeplogin']
+        find_type: XPATH
+        operate_type: click
+        info: 单击取消自动登录单选框
+      - element_info: //span[text()='登录']
+        find_type: XPATH
+        operate_type: click
+        info: 单击登录按钮
+      - element_info: userProNick
+        find_type: ID
+        operate_type: perform
+        info: 鼠标悬停账户菜单
+      - element_info: //a[@class='logout']
+        find_type: XPATH
+        operate_type: click
+        info: 选择退出
+check:
+      - element_info: //div[@class='box-mobilelogin']/div[1]/span
+        find_type: XPATH
+        info: 检查输入手机号或密码，登录异常提示
+      - element_info: userProNick
+        find_type: ID
+        info: 成功登录
+      - element_info: reg-link-a
+        find_type: ID
+        info: 检查退出登录是否成功

@@ -1,0 +1,54 @@
+-
+  id: test_login001.1
+  detail : 手机号和密码为空登录
+  screenshot : phone_pawd_empty
+  data:
+    phone: ""
+    password: ""
+  check :
+     - 手机号不能为空
+-
+  id: test_login001.2
+  detail : 手机号为空登录
+  screenshot : phone_empty
+  data :
+    phone: ""
+    password : aa
+  check :
+    - 手机号不能为空
+-
+  id: test_login001.3
+  detail : 密码为空登录
+  screenshot : pawd_empty
+  data :
+    phone : 13511112222
+    password: ""
+  check :
+    - 密码不能为空
+-
+  id: test_login001.4
+  detail : 非法手机号登录
+  screenshot : phone_error
+  data :
+    phone : abc
+    password: aa
+  check :
+    - 手机号格式不对
+-
+  id: test_login001.5
+  detail : 手机号或密码不匹配
+  screenshot : pawd_error
+  data :
+    phone : 13511112222
+    password: aa
+  check :
+    - 账号密码错误
+-
+  id: test_login001.6
+  detail : 手机号和密码正确
+  screenshot : phone_pawd_success
+  data :
+    phone : 13925282124
+    password: yxxjsjyj30
+  check :
+    - yingoja

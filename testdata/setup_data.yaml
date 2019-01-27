@@ -1,0 +1,19 @@
+-
+  id: test_setup001.1
+  detail : 昵称和签名档为空
+  screenshot : name_empty
+  data:
+    name: ""
+    sign: ""
+  check :
+     - 请输入用户昵称
+-
+  id: test_setup001.2
+  detail : 正常录入保存
+  screenshot : name_sign_success
+  data:
+    name: "yingoja"
+    sign: "自动化测试"
+  check :
+     - yingoja
+     - 自动化测试
