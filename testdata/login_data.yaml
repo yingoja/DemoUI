@@ -49,6 +49,6 @@
   screenshot : phone_pawd_success
   data :
     phone : 13814785689
-    password: 457
+    password: *********
   check :
     - yingoja
