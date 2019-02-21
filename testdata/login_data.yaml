@@ -48,7 +48,7 @@
   detail : 手机号和密码正确
   screenshot : phone_pawd_success
   data :
-    phone : 13814785689
+    phone : 138********
     password: *********
   check :
     - yingoja
